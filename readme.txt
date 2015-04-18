@@ -11,7 +11,7 @@ Requires at least: 3.6.0
 
 Tested up to: 4.1.1
 
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 
 License: GPLv3
 
@@ -115,6 +115,10 @@ add_filter('show_admin_bar', '__return_false'); * to you funtions.php file in yo
 
 
 == Social Sites ==
+
+* Website - https://www.ruddernation.com
+
+* Room Spy - https://www.tinychat-spy.com
 
 * Facebook - https://www.facebook.com/rndtc
 

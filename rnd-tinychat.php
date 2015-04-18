@@ -7,10 +7,10 @@
 * Description: TinyChat full screen video chat for WordPress/BuddyPress, This also has YouTube/SoundCloud for all chatters and now has smileys enabled using my embed file, This advanced version allows you to add your own room name and allows you to input your own personal data like autoop and prohash info as well as account name.
 * Requires at least: WordPress 4.0, BuddyPress 1.8.1
 * Tested up to: WordPress 4.1.1, BuddyPress 2.2.2.1
-* Version: 1.0.0
+* Version: 1.0.1
 * License: GPLv3
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
-* Date: 16th April 2015
+* Date: 18th April 2015
 */
 define('COMPARE_VERSION', '1.0.0');
 register_activation_hook(__FILE__, 'wordpress_chat_advanced_install');
@@ -84,19 +84,18 @@ function wp_show_wordpress_chat_advanced() {
 	?>
 <?php $room = $_POST ['room']; $username = $_POST ['username']; $autoop = $_POST ['autoop']; $prohash = $_POST ['prohash'];$account = $_POST ['account']; $url = ''; $current_user = wp_get_current_user(); 
 echo ' 
-<form action="'.$url.'" method="post" class="form">Room:<input type="text" name="room" title="Enter Room Name, If it does not exist then it will create the room for you." placeholder="Example:ruddernation"/>
-Autoop:<input type="text" name="autoop" id="autoop" title="Enter your autoop code, This is needed for admins of the room only."/>
-Prohash:<input type="text" name="prohash" id="prohash" title="Enter prohash code, If your a pro user only."/> 
-Account:<input type="text" name="account" id="account" title="If not logged in on Tinychat then whatever account name you put here you will clone if it exists." placeholder="Example: ruddernation"/>
-<input type="submit" class="button" value="Enter"/></form></div>'; ?>
+<ul><form action="'.$url.'" method="post" class="form">Room:&nbsp;<input type="text" name="room" title="Enter Room Name, If it does not exist then it will create the room for you." placeholder="Example:ruddernation"/>
+Autoop:&nbsp;<input type="text" name="autoop" id="autoop" title="Enter your autoop code, This is needed for admins of the room only."/>
+Prohash:&nbsp;<input type="text" name="prohash" id="prohash" title="Enter prohash code, If your a pro user only."/>
+Account:&nbsp;<input type="text" name="account" id="account" title="If not logged in on Tinychat then whatever account name you put here you will clone if it exists." placeholder="Example: ruddernation"/><br><input type="submit" class="button" value="Enter"/></ul></form></div>'; ?>
 
-		<style>#chat{position:fixed;left:0px;right:0px;bottom:0px;height:98%;width:100%;z-index:9999}</style>
+<style>#chat{position:fixed;left:0px;right:0px;bottom:0px;height:98%;width:100%;z-index:9999}input[type="text"]{width:280px;display:block;}</style>
 <?php 
 if((preg_match("/^[a-zA-Z0-9]{3,}/", $_POST['room']) == '1'))
 {
 if($room !== 'room')
 $room=(strlen($room) > 32) ? substr($room,0,32).'' : $room;
-$autoop=(strlen($autoop) > 64) ? substr($autoop,0,64).'' : $autoop;
+$autoop=(strlen($autoop) > 32) ? substr($autoop,0,32).'' : $autoop;
 $prohash=(strlen($prohash) > 64) ? substr($prohash,0,64).'' : $prohash;
 $account=(strlen($account) > 32) ? substr($account,0,32).'' : $account;
 $room=htmlspecialchars($room,ENT_QUOTES, 'UTF-8');
