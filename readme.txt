@@ -128,4 +128,4 @@ add_filter('show_admin_bar', '__return_false'); * to you funtions.php file in yo
 
 * WordPress - https://profiles.wordpress.org/ruddernation
 
-* Skype - ruddernation.designs
+* Skype - ruddernation.designs - skype:ruddernation.designs?userinfo
