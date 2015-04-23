@@ -96,7 +96,7 @@ If anyone else requires another feature or has an idea for me to implement, Then
 
 * Q. How do I add it to my blog/website?
 
-* A. Just go to the backend and on appearance select menus, From there you can add your page, It'll be *chatroom* by default.
+* A. Just go to the backend and on appearance select menus, From there you can add your page, It'll be *chatroom-advanced* by default.
 
 
 * Q. I'm having issues with my wordpress keyboard shortcuts affecting my chat, It's not allowing me to use certain letters.
