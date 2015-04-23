@@ -9,9 +9,9 @@ Tags: video chat, tinychat, chat, wordpress chat, buddypress chat, wordpress vid
 
 Requires at least: 3.6.0
 
-Tested up to: 4.1.1
+Tested up to: 4.2
 
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 
 License: GPLv3
 
@@ -109,9 +109,13 @@ add_filter('show_admin_bar', '__return_false'); * to you funtions.php file in yo
 == Changelog ==
 
 
-= 1.0.1 =
+= 1.0.0 =
 
 * First version.
+
+= 1.0.2 =
+
+* Works with WP 4.2 and tested up to 4.3-alpha-32280
 
 
 == Social Sites ==
