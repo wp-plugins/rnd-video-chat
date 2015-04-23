@@ -11,7 +11,7 @@ Requires at least: 3.6.0
 
 Tested up to: 4.2
 
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 
 License: GPLv3
 
@@ -116,6 +116,10 @@ add_filter('show_admin_bar', '__return_false'); * to you funtions.php file in yo
 = 1.0.2 =
 
 * Works with WP 4.2 and tested up to 4.3-alpha-32280
+
+= 1.0.3 =
+
+* Clicking the share button in chat will now give you the correct URL to share to your friends.
 
 
 == Social Sites ==

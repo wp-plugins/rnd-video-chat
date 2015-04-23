@@ -7,7 +7,7 @@
 * Description: TinyChat full screen video chat for WordPress/BuddyPress, This also has YouTube/SoundCloud for all chatters and now has smileys enabled using my embed file, This advanced version allows you to add your own room name and allows you to input your own personal data like autoop and prohash info as well as account name.
 * Requires at least: WordPress 4.0, BuddyPress 1.8.1
 * Tested up to: WordPress 4.2, BuddyPress 2.2.3.1
-* Version: 1.0.2
+* Version: 1.0.3
 * License: GPLv3
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 * Date: 23rd April 2015
@@ -109,4 +109,4 @@ $autoop=preg_replace('/[^0-9]/s', '', $autoop);
 {		
 echo '<div id="chat"><script   data-cfasync="false" src="https://www.ruddernation.info/info/js/slagmodified.js"></script><script   data-cfasync="false" type=text/javascript>
 var embed;
-embed = tinychat({room: "'.$room.'",';{echo' autoop: "'.$autoop.'",';}{echo' account: "'.$account.'",';}{echo' prohash: "'.$prohash.'",';} echo 'nick: "' . $current_user->display_name .'"'; echo '})</script><div id="Ruddernation"></div></div>';}}}?>
+embed = tinychat({room: "'.$room.'",';{echo' autoop: "'.$autoop.'",';}{echo' account: "'.$account.'",';}{echo' prohash: "'.$prohash.'",';} echo 'nick: "' . $current_user->display_name .'",'; {echo' urlsuper: "'.$_SERVER["HTTP_HOST"],$_SERVER["REQUEST_URI"].'"';}echo '})</script><div id="Ruddernation"></div></div>';}}}?>
