@@ -107,6 +107,6 @@ $account=preg_replace('/[^a-zA-Z0-9]/s', '', $account);
 $prohash=preg_replace('/[^0-9]/s', '', $prohash);
 $autoop=preg_replace('/[^0-9]/s', '', $autoop);
 {		
-echo '<div id="chat"><script   data-cfasync="false" src="https://www.ruddernation.info/info/js/slagmodified.js?version=1.0"></script><script   data-cfasync="false" type=text/javascript>
+echo '<div id="chat"><script   data-cfasync="false" src="https://www.ruddernation.info/info/js/slagmodified.js?version=1.1"></script><script   data-cfasync="false" type=text/javascript>
 var embed;
 embed = tinychat({room: "'.$room.'",';{echo' autoop: "'.$autoop.'",';}{echo' account: "'.$account.'",';}{echo' prohash: "'.$prohash.'",';} echo 'nick: "' . $current_user->display_name .'",'; {echo' urlsuper: "'.$_SERVER["HTTP_HOST"],$_SERVER["REQUEST_URI"].'"';}echo '})</script><div id="Ruddernation"></div></div>';}}}?>
