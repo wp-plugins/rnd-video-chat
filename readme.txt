@@ -11,7 +11,7 @@ Requires at least: 3.6.0
 
 Tested up to: 4.2
 
-Stable tag: 1.0.9
+Stable tag: 1.1.0
 
 License: GPLv3
 
@@ -121,6 +121,8 @@ add_filter('show_admin_bar', '__return_false'); * to you funtions.php file in yo
 
 * Clicking the share button in chat will now give you the correct URL to share to your friends.
 
+= 1.1.0 =
+* Fixed the autoop error, Star was not showing due to letters being removed.
 
 == Social Sites ==
 

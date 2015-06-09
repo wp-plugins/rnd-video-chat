@@ -7,12 +7,12 @@
 * Description: TinyChat full screen video chat for WordPress/BuddyPress, This also has YouTube/SoundCloud for all chatters and now has smileys enabled using my embed file, This advanced version allows you to add your own room name and allows you to input your own personal data like autoop and prohash info as well as account name.
 * Requires at least: WordPress 4.0, BuddyPress 1.8.1
 * Tested up to: WordPress 4.2, BuddyPress 2.2.3.1
-* Version: 1.0.9
+* Version: 1.1.0
 * License: GPLv3
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
-* Date: 04th June 2015
+* Date: 09th June 2015
 */
-define('COMPARE_VERSION', '1.0.8');
+define('COMPARE_VERSION', '1.0.9');
 register_activation_hook(__FILE__, 'wordpress_chat_advanced_install');
 function wordpress_chat_advanced_install() {
 	
@@ -104,8 +104,8 @@ $account=htmlspecialchars($account,ENT_QUOTES, 'UTF-8');
 $prohash=htmlspecialchars($prohash,ENT_QUOTES, 'UTF-8');
 $room=preg_replace('/[^a-z0-9]/s', '', $room);
 $account=preg_replace('/[^a-zA-Z0-9]/s', '', $account);
-$prohash=preg_replace('/[^0-9]/s', '', $prohash);
-$autoop=preg_replace('/[^0-9]/s', '', $autoop);
+$prohash=preg_replace('/[^a-z0-9]/s', '', $prohash);
+$autoop=preg_replace('/[^a-z0-9]/s', '', $autoop);
 {		
 echo '<div id="chat"><script   data-cfasync="false" src="https://www.ruddernation.info/info/js/slagmodified.js?version=1.6"></script><script   data-cfasync="false" type=text/javascript>
 var embed;
