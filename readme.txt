@@ -1,4 +1,4 @@
-=== Wordpress Video Chat Advanced ===
+=== Wordpress Video Chat Advanced  - Only updated on Github ===
 
 
 Contributors: ruddernation

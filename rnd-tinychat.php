@@ -1,6 +1,6 @@
 <?php
 /*
-* Plugin Name: Wordpress Video Chat Advanced
+* Plugin Name: Wordpress Video Chat Advanced - Only updated on Github 
 * Plugin URI: https://www.ruddernation.com
 * Author: Ruddernation Designs
 * Author URI: http://profiles.wordpress.org/ruddernation
