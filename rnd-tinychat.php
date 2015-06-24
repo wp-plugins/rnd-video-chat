@@ -1,18 +1,18 @@
 <?php
 /*
-* Plugin Name: Wordpress Video Chat Advanced - Only updated on Github 
-* Plugin URI: https://www.ruddernation.com
-* Author: Ruddernation Designs
+* Plugin Name: Wordpress Video Chat Advanced 
+* Plugin URI: https://wordpress.org/plugins/rnd-video-chat/
+* Author: ruddernation
 * Author URI: http://profiles.wordpress.org/ruddernation
 * Description: TinyChat full screen video chat for WordPress/BuddyPress, This also has YouTube/SoundCloud for all chatters and now has smileys enabled using my embed file, This advanced version allows you to add your own room name and allows you to input your own personal data like autoop and prohash info as well as account name.
-* Requires at least: WordPress 4.0, BuddyPress 1.8.1
-* Tested up to: WordPress 4.2, BuddyPress 2.2.3.1
-* Version: 1.1.0
+* Requires at least: WordPress 3.6, BuddyPress 1.8.1
+* Tested up to: WordPress 4.3, BuddyPress 2.3
+* Version: 1.1.1
 * License: GPLv3
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
-* Date: 09th June 2015
+* Date: 24th June 2015
 */
-define('COMPARE_VERSION', '1.0.9');
+define('COMPARE_VERSION', '1.1.0');
 register_activation_hook(__FILE__, 'wordpress_chat_advanced_install');
 function wordpress_chat_advanced_install() {
 	

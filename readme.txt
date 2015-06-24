@@ -1,4 +1,4 @@
-=== Wordpress Video Chat Advanced  - Only updated on Github ===
+=== Wordpress Video Chat Advanced ===
 
 
 Contributors: ruddernation
@@ -9,9 +9,9 @@ Tags: video chat, tinychat, chat, wordpress chat, buddypress chat, wordpress vid
 
 Requires at least: 3.6.0
 
-Tested up to: 4.2
+Tested up to: 4.3
 
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 
 License: GPLv3
 
@@ -137,5 +137,3 @@ add_filter('show_admin_bar', '__return_false'); * to you funtions.php file in yo
 * Github - https://github.com/ruddernation
 
 * WordPress - https://profiles.wordpress.org/ruddernation
-
-* Skype - ruddernation.designs
