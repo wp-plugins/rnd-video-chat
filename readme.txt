@@ -11,7 +11,7 @@ Requires at least: 3.6.0
 
 Tested up to: 4.3
 
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 
 License: GPLv3
 
@@ -123,6 +123,9 @@ add_filter('show_admin_bar', '__return_false'); * to you funtions.php file in yo
 
 = 1.1.0 =
 * Fixed the autoop error, Star was not showing due to letters being removed.
+
+= 1.1.2 = 
+* Removed account as TinyChat have disabled this from being used unless logged in to their domain.
 
 == Social Sites ==
 
