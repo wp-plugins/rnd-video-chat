@@ -11,7 +11,7 @@ Requires at least: 3.6.0
 
 Tested up to: 4.3
 
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 
 License: GPLv3
 
@@ -126,6 +126,10 @@ add_filter('show_admin_bar', '__return_false'); * to you funtions.php file in yo
 
 = 1.1.2 = 
 * Removed account as TinyChat have disabled this from being used unless logged in to their domain.
+
+= 1.1.5 =
+* Major update, Please update to latest version for chat to work, 
+This now shows the Google reCaptcha that TinyChat use, You may need to click on the shield to display unsecured content as TinyChat don't currently have the encryption set.
 
 == Social Sites ==
 

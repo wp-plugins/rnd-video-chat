@@ -7,12 +7,12 @@
 * Description: TinyChat full screen video chat for WordPress/BuddyPress, This also has YouTube/SoundCloud for all chatters and now has smileys enabled using my embed file, This advanced version allows you to add your own room name and allows you to input your own personal data like autoop and prohash info as well as account name.
 * Requires at least: WordPress 3.6, BuddyPress 1.8.1
 * Tested up to: WordPress 4.3, BuddyPress 2.3
-* Version: 1.1.4
+* Version: 1.1.5
 * License: GPLv3
 * License URI: http://www.gnu.org/licenses/gpl-3.0.html
-* Date: 07th August 2015
+* Date: 08th August 2015
 */
-define('COMPARE_VERSION', '1.1.3');
+define('COMPARE_VERSION', '1.1.4');
 register_activation_hook(__FILE__, 'wordpress_chat_advanced_install');
 function wordpress_chat_advanced_install() {
 	
@@ -88,8 +88,11 @@ echo '
 Autoop:&nbsp;<input type="text" name="autoop" id="autoop" title="Enter your autoop code, This is needed for admins of the room only."/>
 Prohash:&nbsp;<input type="text" name="prohash" id="prohash" title="Enter prohash code, If your a pro user only."/>
 <br><input type="submit" class="button" value="Enter"/></ul></form></div>'; ?>
+<strong>If Chat isn't loading then check for a shield in your URL bar, <br />
+Click that and allow/load unsecured/unsafe scripts/content to run<br />
+TinyChat do not currently encrypt all of their content.</strong>
 
-<style>#chat{position:fixed;left:0px;right:0px;bottom:0px;height:100%;width:100%;z-index:9999}input[type="text"]{width:280px;display:block;}</style>
+<style>#chat{position:fixed;left:0px;right:0px;bottom:0px;height:98%;width:100%;z-index:9999}input[type="text"]{width:280px;display:block;}</style>
 <?php 
 if((preg_match("/^[a-zA-Z0-9]{3,}/", $_POST['room']) == '1'))
 {
@@ -104,6 +107,9 @@ $room=preg_replace('/[^a-zA-Z0-9]/s', '', $room);
 $prohash=preg_replace('/[^a-zA-Z0-9]/s', '', $prohash);
 $autoop=preg_replace('/[^a-zA-Z0-9]/s', '', $autoop);
 {		
-echo '<div id="chat"><script   data-cfasync="false" src="https://www.ruddernation.com/info/js/slagmodified.js?version=1.7"></script><script   data-cfasync="false" type=text/javascript>
-var embed;
-embed = tinychat({room: "'.$room.'",';{echo' autoop: "'.$autoop.'",';}{echo' prohash: "'.$prohash.'",';} echo 'nick: "' . $current_user->display_name .'",'; {echo' urlsuper: "'.$_SERVER["HTTP_HOST"],$_SERVER["REQUEST_URI"].'"';}echo '})</script><div id="Ruddernation"></div></div>';}}}?>
+echo '<div id="chat"><script data-cfasync="false" type=text/javascript>
+var tinychat = {room: "'.$room.'",';{echo' autoop: "'.$autoop.'",';}{echo' prohash: "'.$prohash.'",';} 
+echo 'wmode:"transparent",'; 
+echo 'youtube:"all",';
+echo 'nick: "' . $current_user->display_name .'",'; {echo' urlsuper: "'.$_SERVER["HTTP_HOST"],$_SERVER["REQUEST_URI"].'"';}echo '}</script><script data-cfasync="false" src="https://www.ruddernation.com/info/js/eslag.js"></script>
+<div id="client"> </div></div>';}}}?>
